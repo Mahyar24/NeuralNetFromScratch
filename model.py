@@ -188,8 +188,8 @@ class Model:
 
     def fit(
         self,
-        X,
-        y,
+        X: np.ndarray,
+        y: np.ndarray,
         epochs=1_000,
         batch_size: Optional[int] = None,
         shuffle: bool = True,
