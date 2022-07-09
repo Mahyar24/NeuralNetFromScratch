@@ -11,7 +11,7 @@ In this repository, with only `numpy` as only dependency, I have implemented a n
 ```bash
 python3.9 -m pip install nnfs-implementation;
 ```
-P,S: This package is compatible with python3.9+.
+P.S.: This package is compatible with python3.9+.
 
 ## Examples
 There is [a module](nnfs/examples.py) with some examples in the repository, but since this package is use the `nnfs` name internally,

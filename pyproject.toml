@@ -8,6 +8,16 @@ homepage = "https://github.com/mahyar24/NeuralNetFromScratch/"
 repository = "https://github.com/mahyar24/NeuralNetFromScratch/"
 readme = "README.md"
 exclude = ["VanillaNN.ipynb"]
+packages = [
+    { include = "nnfs" }
+]
+keywords = [
+    "Deep Learning",
+    "Neural Network",
+    "DL",
+    "ML",
+    "AI"
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
