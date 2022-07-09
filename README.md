@@ -11,7 +11,7 @@ python3.9 -m pip install nnfs-implementation;
 P,S: This package is compatible with python3.9+.
 
 ## Examples
-There is [a module](examples.py) with some examples in the repository, but since this package is use the `nnfs` name internally,
+There is [a module](nnfs/examples.py) with some examples in the repository, but since this package is use the `nnfs` name internally,
 **it will have a name collision** with the original [nnfs package](https://pypi.org/project/nnfs/) which provides the toy datasets, and you cannot run it. although a glance on it doesn't hurt.
 Also, There is this notebook [VanillaNN.ipynb](VanillaNN.ipynb) which is the full implementation will all the examples and some nice plots at the bottom. I highly recommend you to take a look at it.
 
@@ -68,7 +68,7 @@ Softmax activation layer combined with categorical cross-entropy loss.
 The derivatives of combining these two layers is computationally a lot cheaper than processing each one separately;
 so we merge them into one layer. **THERE IS NO NEED TO USE A SOFTMAX AT LAST LAYER ANYMORE.** (CLASSIFICATION)
 
-### Optimizer
+### Optimizers
 We can take advantage of two optimizers; Momentum and Adam. Adam is superior to Momentum in most cases.
 
 ```python
@@ -137,6 +137,11 @@ model.save("model.pkl", cleanup=True)
 ```
 cleanup option will remove some unnecessary attributes that leads to dramatically reduced saved model size.
 default value is True.
+
+
+## Caution
+**This project is only for demonstration purpose.** It works on numpy arrays (CPU) so you will face a poor performance.
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
