@@ -3,6 +3,9 @@
 In this repository, with only `numpy` as only dependency, I have implemented a neural network from scratch based on this marvelous book:
 [nnfs.io](https://nnfs.io/).
 
+![Data](./pics/Data.png)
+![Boundaries](./pics/Boundaries.png)
+
 ## Installation
 
 ```bash
@@ -73,6 +76,7 @@ We can take advantage of two optimizers; Momentum and Adam. Adam is superior to 
 
 ```python
 from nnfs.optimizers import Adam, Momentum
+
 adam = Adam(learning_rate=0.01, decay=1e-5, beta_1=0.9, beta_2=0.999)  # Default Values
 momentum = Momentum(learning_rate=0.01, decay=1e-5, beta=0.1) # Default Values
 model = Model(loss=SoftmaxLoss(), optimizer=adam, metric=Accuracy())
@@ -84,7 +88,8 @@ decay is the learning rate decay.
 ### Metrics
 We have 5 metrics which we use during training and evaluation phase.
 ```python
-from nnfs.metrics import Accuracy, ExplainedVariance, Precision, Recall, FScore
+from nnfs.metrics import Accuracy, ExplainedVariance, FScore, Precision, Recall
+
 model = Model(loss=SoftmaxLoss(), optimizer=adam, metric=Accuracy())
 validation_metric = ExplainedVariance.evaluate(y_test, model.predict(X_test))
 ```
@@ -96,6 +101,7 @@ We provide FullyConnectedLayer and DropoutLayer.
 
 ```python
 from nnfs.layer import Dropout, Layer
+
 model.add(Layer(64, 128)) # FullyConnectedLayer with 64 inputs and 128 outputs.
 model.add(Dropout(0.2)) # DropoutLayer with 20% dropout.
 model.add(Layer(2, 64, w_l2=5e-4, b_l2=5e-4)) # FullyConnectedLayer with L2 regularization. (weight and bias)
@@ -106,7 +112,8 @@ model.add(Layer(2, 64, w_l2=5e-4, b_l2=5e-4, w_l1=5e-4, b_l1=5e-4)) # FullyConne
 nnfs-implementation provides six activation functions:
 
 ```python
-from nnfs.activations import Linear, ReLU, LeakyReLU, Sigmoid, TanH, Softmax
+from nnfs.activations import LeakyReLU, Linear, ReLU, Sigmoid, Softmax, TanH
+
 model.add(ReLU())
 model.add(LeakyReLU(negative_slope=0.1))
 ```
@@ -129,6 +136,7 @@ y_pred_proba = model.predict_proba(X_test)
 To load a model, simply use:
 ```python
 from nnfs.model import Model
+
 model = Model.load("model.pkl")
 ```
 and to save the model:
