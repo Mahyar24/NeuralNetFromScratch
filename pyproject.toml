@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nnfs-implementation"
+version = "0.0.1"
+description = "Impelementation of Neural Networks from Scratch based on this book: https://nnfs.io/"
+authors = ["Mahyar Mahdavi <Mahyar@Mahyar24.com>"]
+license = "GPLv3"
+homepage = "https://github.com/mahyar24/NeuralNetFromScratch/"
+repository = "https://github.com/mahyar24/NeuralNetFromScratch/"
+readme = "README.md"
+exclude = ["VanillaNN.ipynb"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.23.1"
+tqdm = "^4.64.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
