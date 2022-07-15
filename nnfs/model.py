@@ -247,7 +247,7 @@ class Model:
 
         if self.loss.loss_type == LossType.REGRESSION:
             raise NotImplementedError(
-                "For prediction regression problem, use `predict` method."
+                "For predicting regression problems, use `predict` method."
             )
 
         output = self.forward(X, evaluate_mode=True)
