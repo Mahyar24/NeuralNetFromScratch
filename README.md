@@ -16,7 +16,7 @@ P.S.: This package is compatible with python3.9+.
 ## Examples
 There is [a module](nnfs/examples.py) with some examples in the repository, but since this package is use the `nnfs` name internally,
 **it will have a name collision** with the original [nnfs package](https://pypi.org/project/nnfs/) which provides the toy datasets, and you cannot run it. although a glance on it doesn't hurt.
-Also, There is this notebook [VanillaNN.ipynb](VanillaNN.ipynb) which is the full implementation will all the examples and some nice plots at the bottom. I highly recommend you to take a look at it.
+Also, There is this notebook [VanillaNN.ipynb](VanillaNN.ipynb) which is the full implementation with all the examples and some nice plots at the bottom. I highly recommend you to take a look at it.
 
 ## Instructions
 A simple multi-class classifier can be implemented with the following code:
