@@ -3,8 +3,9 @@
 In this repository, with only `numpy` as only dependency, I have implemented a neural network from scratch based on this marvelous book:
 [nnfs.io](https://nnfs.io/).
 
-![Data](./pics/Data.png)
-![Boundaries](./pics/Boundaries.png)
+![DNA](./pics/helix3d_learning_small.gif)
+![Spiral](./pics/spiral_learning_small.gif)
+
 
 ## Installation
 
