@@ -3,9 +3,15 @@
 In this repository, with only `numpy` as only dependency, I have implemented a neural network from scratch based on this marvelous book:
 [nnfs.io](https://nnfs.io/).
 
-![DNA](./pics/helix3d_learning_small.gif)
-![Spiral](./pics/spiral_learning_small.gif)
+<p align="center">
+  <img src="./pics/helix3d_learning_small.gif" alt="DNA">
+  <img src="./pics/spiral_learning_small.gif" alt="Spiral">
+</p>
 
+<p align="center">
+  <img src="./pics/Data.png" alt="Data">
+  <img src="./pics/Boundaries.png" alt="Boundaries">
+</p>
 
 ## Installation
 
